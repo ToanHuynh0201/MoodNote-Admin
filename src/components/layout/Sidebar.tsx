@@ -5,6 +5,7 @@ const navItems = [
   { to: '/dashboard', label: 'Dashboard', icon: '📊' },
   { to: '/users', label: 'Users', icon: '👥' },
   { to: '/moods', label: 'Moods', icon: '😊' },
+  { to: '/music', label: 'Music', icon: '🎵' },
 ]
 
 export default function Sidebar() {

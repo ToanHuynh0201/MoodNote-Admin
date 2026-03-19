@@ -5,6 +5,7 @@ import LoginPage from '@/pages/Login/LoginPage'
 import DashboardPage from '@/pages/Dashboard/DashboardPage'
 import UsersPage from '@/pages/Users/UsersPage'
 import NotificationsPage from '@/pages/Notifications/NotificationsPage'
+import MusicPage from '@/pages/Music/MusicPage'
 import NotFoundPage from '@/pages/NotFound/NotFoundPage'
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
           {
             path: 'notifications',
             element: <NotificationsPage />,
+          },
+          {
+            path: 'music',
+            element: <MusicPage />,
           },
         ],
       },
