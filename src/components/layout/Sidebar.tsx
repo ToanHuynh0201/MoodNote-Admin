@@ -1,0 +1,34 @@
+import { NavLink } from 'react-router-dom'
+import './Sidebar.css'
+
+const navItems = [
+  { to: '/dashboard', label: 'Dashboard', icon: '📊' },
+  { to: '/users', label: 'Users', icon: '👥' },
+  { to: '/moods', label: 'Moods', icon: '😊' },
+]
+
+export default function Sidebar() {
+  return (
+    <aside className="sidebar">
+      <div className="sidebar__brand">
+        <span className="sidebar__brand-icon">🎵</span>
+        <span className="sidebar__brand-name">MoodNote</span>
+      </div>
+
+      <nav className="sidebar__nav">
+        {navItems.map((item) => (
+          <NavLink
+            key={item.to}
+            to={item.to}
+            className={({ isActive }) =>
+              `sidebar__nav-item${isActive ? ' sidebar__nav-item--active' : ''}`
+            }
+          >
+            <span className="sidebar__nav-icon">{item.icon}</span>
+            <span className="sidebar__nav-label">{item.label}</span>
+          </NavLink>
+        ))}
+      </nav>
+    </aside>
+  )
+}
